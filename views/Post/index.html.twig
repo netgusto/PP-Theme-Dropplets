@@ -9,13 +9,15 @@
     <div class="row">
         <div class="one-quarter meta">
             <div class="thumbnail">
-                <img src="{{ app.request.basepath }}/vendor/netgusto/mozza-theme-default/assets/img/netgusto.png" alt="{{ post.title }}" />
+                {% if post.image %}
+                    <img src="{{ post.image|toresourceurl(post) }}" alt="{{ post.title }}" />
+                {% endif %}
             </div>
 
             <ul>
                 <li>Written by {{ post.author }}</li>
                 {% if post.twitter|length %}
-                <li>Twitter: {{ post.twitter }}</li>
+                <li>Twitter: <a href="https://twitter.com/{{ post.twitter }}">{{ post.twitter }}</a></li>
                 {% endif %}
                 {% if post.about|length %}
                     <li>About
@@ -38,27 +40,22 @@
 
             {{ post.content|markdown }}
 
-            <p>&nbsp;</p>
-
-            {# <ul class="actions">
-                <li><a class="button" href="{{ homeurl }}">Posts</a></li>
-            </ul> #}
         </div>
     </div>
 
     <div class="row">
         <div class="one-quarter"></div>
-        <div class="three-quarters comments">{{ component_disqus() }}</div>
+        <div class="three-quarters comments">{{ component_disqus(post) }}</div>
     </div>
 </article>
 
-{% if nextpost %}
+{% if nextpost is defined and nextpost %}
 <div class="pagination next">
     <a class="fa fa-chevron-left" href="{{ app.url_generator.generate('post', { slug: nextpost.slug }) }}"></a>
 </div>
 {% endif %}
 
-{% if previouspost %}
+{% if previouspost is defined and previouspost %}
 <div class="pagination previous">
     <a class="fa fa-chevron-right" href="{{ app.url_generator.generate('post', { slug: previouspost.slug }) }}"></a>
 </div>

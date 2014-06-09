@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    {% if post is defined %}{{ component_metatags(post) }}
+    {% else %}{{ component_metatags() }}
+    {% endif %}
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
+
+    <!-- Theme Styles -->
+    <link rel="stylesheet" href="{{ app.request.basepath }}/vendor/netgusto/mozza-theme-default/assets/css/style.css">
+    <link rel="stylesheet" href="{{ app.request.basepath }}/vendor/netgusto/mozza-theme-default/assets/css/subdiv.css">
+    <link rel="stylesheet" href="{{ app.request.basepath }}/vendor/netgusto/mozza-theme-default/assets/css/mozza.css">
+
+    <!-- Highlightjs Styles -->
+    <link rel="stylesheet" href="{{ app.request.basepath }}/vendor/netgusto/mozza-theme-default/assets/lib/highlightjs/monokai.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{{ app.request.basepath }}/vendor/font-awesome/font-awesome/css/font-awesome.min.css">
+
+    {% block head %}
+    {% include '@Custom/head.html.twig' %}
+    {% endblock head %}
+</head>
+<body>
+
+    {% block header %}
+    {% include '@Custom/header.html.twig' %}
+    {% endblock header %}
+
+    {% block body %}
+    {% endblock body %}
+
+    {% block footer %}
+    {% include '@Custom/footer.html.twig' %}
+    {% endblock footer %}
+
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="{{ app.request.basepath }}/vendor/netgusto/mozza-theme-default/assets/lib/highlightjs/highlight.pack.js" type="text/javascript"></script>
+    <script>
+        hljs.configure({
+            tabReplace: '    ', // 4 spaces
+        });
+        hljs.initHighlighting();
+    </script>
+</body>
+</html>

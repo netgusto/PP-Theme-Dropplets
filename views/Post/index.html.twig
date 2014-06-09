@@ -1,0 +1,67 @@
+{% extends '@MozzaTheme/base.html.twig' %}
+
+{% block body %}
+
+{% set posturl = app.url_generator.generate('post', { slug: post.slug }) %}
+{% set homeurl = app.url_generator.generate('home') %}
+
+<article class="published">
+    <div class="row">
+        <div class="one-quarter meta">
+            <div class="thumbnail">
+                <img src="{{ app.request.basepath }}/vendor/netgusto/mozza-theme-default/assets/img/netgusto.png" alt="{{ post.title }}" />
+            </div>
+
+            <ul>
+                <li>Written by {{ post.author }}</li>
+                {% if post.twitter|length %}
+                <li>Twitter: {{ post.twitter }}</li>
+                {% endif %}
+                {% if post.about|length %}
+                    <li>About
+                    {% if post.about|length == 1 %}
+                        {{ post.about|first }}
+                    {% else %}
+                        {{ post.about|slice(0, -1)|join(', ') }} and {{ post.about|slice(-1)|join('') }}
+                    {% endif %}
+                    </li>
+                {% endif %}
+                <li>{{ post.date|date(config.date.format) }}</li>
+                <li></li>
+            </ul>
+        </div>
+
+        <div class="three-quarters post">
+            <h2><a href="{{ posturl }}">{{ post.title }}</a></h2>
+
+            {{ post.intro|markdown }}
+
+            {{ post.content|markdown }}
+
+            <p>&nbsp;</p>
+
+            {# <ul class="actions">
+                <li><a class="button" href="{{ homeurl }}">Posts</a></li>
+            </ul> #}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="one-quarter"></div>
+        <div class="three-quarters comments">{{ component_disqus() }}</div>
+    </div>
+</article>
+
+{% if nextpost %}
+<div class="pagination next">
+    <a class="fa fa-chevron-left" href="{{ app.url_generator.generate('post', { slug: nextpost.slug }) }}"></a>
+</div>
+{% endif %}
+
+{% if previouspost %}
+<div class="pagination previous">
+    <a class="fa fa-chevron-right" href="{{ app.url_generator.generate('post', { slug: previouspost.slug }) }}"></a>
+</div>
+{% endif %}
+
+{% endblock body %}

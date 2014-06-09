@@ -1,0 +1,54 @@
+.hljs {
+    overflow: auto;
+}
+
+/* M
+*********************************************************************************************/
+@media (max-width: 820px) {
+    .hljs {
+        font-size: 14px;
+    }
+}
+
+.pagination {
+    opacity: 0.3;
+    -webkit-transition: opacity 0.25s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    -moz-transition: opacity 0.25s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    -ms-transition: opacity 0.25s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    -o-transition: opacity 0.25s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition: opacity 0.25s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    position: fixed;
+    top: 50%;
+    font-size: 2em;
+}
+
+.pagination:hover {
+    opacity: 1;
+}
+
+.pagination.next {
+    left: 1rem;
+}
+
+.pagination.previous {
+    right: 1rem;
+}
+
+.pagination>.fa {
+    position: relative;
+    top: -0.5em;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    color: #999;
+}
+
+footer a {
+    color: #999;
+}
+
+footer p {
+    margin: 0;
+}

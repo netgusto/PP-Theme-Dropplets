@@ -1,0 +1,26 @@
+{
+    "name": "netgusto/mozza-theme-default",
+    "version": "1.0.0",
+    "type": "package",
+    "description": "Default theme for Mozza",
+    "keywords": ["silex", "theme", "mozza"],
+    "homepage": "https://github.com/netgusto/mozza-theme-default",
+    "license": "MIT",
+    "authors": [
+        {
+          "name": "Net Gusto",
+          "email": "contact@netgusto.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3"
+    },
+    "require-dev": {
+    },
+    "suggest": {
+    },
+    "autoload": {},
+    "target-dir": "",
+    "extra": {
+    }
+}

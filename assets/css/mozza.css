@@ -1,13 +1,25 @@
+h1, h2, h3, h4 {
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+
+h1.post-title {
+    margin-top: inherit;
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
 .hljs {
     overflow: auto;
 }
 
-/* M
-*********************************************************************************************/
-@media (max-width: 820px) {
-    .hljs {
-        font-size: 14px;
-    }
+code {
+    margin: 0;
+    /* border: 1px solid #ddd; */
+    background-color: #f5f5f5;
+    border-radius: 3px;
+    padding-left: 1px;
+    padding-right: 1px;
 }
 
 .pagination {
@@ -51,4 +63,20 @@ footer a {
 
 footer p {
     margin: 0;
+}
+
+/* M
+*********************************************************************************************/
+@media (max-width: 820px) {
+    pre>code.hljs {
+        font-size: 14px;
+    }
+
+    .pagination.next {
+        left: 0.3rem;
+    }
+
+    .pagination.previous {
+        right: 0.3rem;
+    }
 }

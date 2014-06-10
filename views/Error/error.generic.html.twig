@@ -1,0 +1,13 @@
+{% extends '@MozzaTheme/base.html.twig' %}
+
+{% block body %}
+{% embed '@MozzaTheme/Error/error.base.html.twig' %}
+    
+    {% block title %}Oh snap ! That's an error !{% endblock %}
+    {% block content %}
+        <p>Something wrong happened, and we're terribly sorry.</p>
+        <p><a class="button" href="{{ path('home') }}"><i class="fa fa-chevron-left"></i> Get me back home.</a></p>
+    {% endblock %}
+
+{% endembed %}
+{% endblock body %}

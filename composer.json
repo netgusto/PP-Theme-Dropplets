@@ -1,6 +1,6 @@
 {
     "name": "netgusto/mozza-theme-default",
-    "version": "1.0.0",
+    "version": "1.0.3",
     "type": "package",
     "description": "Default theme for Mozza",
     "keywords": ["silex", "theme", "mozza"],

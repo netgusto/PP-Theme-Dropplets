@@ -3,7 +3,7 @@
 {% block body %}
 {% embed '@MozzaTheme/Error/error.base.html.twig' %}
     
-    {% block title %}Not found.{% block title %}
+    {% block title %}Not found.{% endblock %}
     {% block content %}
         <p>Oh snap ! We cannot find the page you are looking for.</p>
         <p><a class="button" href="{{ path('home') }}"><i class="fa fa-chevron-left"></i> Get me back home.</a></p>

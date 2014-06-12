@@ -1,10 +1,10 @@
 {
-    "name": "netgusto/mozza-theme-default",
+    "name": "netgusto/mozza-theme-dropplets",
     "version": "1.0.3",
     "type": "package",
-    "description": "Default theme for Mozza",
+    "description": "Dropplets theme for Mozza",
     "keywords": ["silex", "theme", "mozza"],
-    "homepage": "https://github.com/netgusto/mozza-theme-default",
+    "homepage": "https://github.com/netgusto/mozza-theme-dropplets",
     "license": "MIT",
     "authors": [
         {

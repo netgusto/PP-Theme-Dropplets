@@ -10,7 +10,7 @@
         <div class="one-quarter meta">
             <div class="thumbnail">
                 {% if post.image %}
-                    <img src="{{ post.image|toresourceurl(post) }}" alt="{{ post.title }}" />
+                    <img src="{{ post.image|topostresourceurl(post) }}" alt="{{ post.title }}" />
                 {% endif %}
             </div>
 

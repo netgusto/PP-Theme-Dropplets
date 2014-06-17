@@ -1,0 +1,25 @@
+{% extends '@MozzaTheme/base.html.twig' %}
+
+{% block body %}
+
+<article class="published">
+    <div class="row">
+        <div class="one-quarter meta">
+            <div class="thumbnail">
+                {% if site.images.logo %}
+                    <img src="{{ site.images.logo|toresourceurl() }}" alt="{{ site.title }}" />
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="three-quarters post">
+            <h1 class="post-title">{% block title %}Le title{% endblock %}</h1>
+
+            <div>{% block content %}<p>Le content</p>{% endblock %}</div>
+
+        </div>
+    </div>
+
+</article>
+
+{% endblock %}

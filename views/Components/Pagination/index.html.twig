@@ -1,0 +1,27 @@
+{% spaceless %}
+{% if nbpages is not defined or nbpages < 1 %}
+    {% set nbpages = 1 %}
+{% endif %}
+{% if page is not defined or page > nbpages %}
+    {% set page = 1 %}
+{% endif %}
+{% endspaceless %}
+
+{% if nbpages > 1 %}
+
+{% if page > 2 %}{% set prevurl = path('home_paged', { page: page-1 }) %}{% else %}{% set prevurl = path('home') %}{% endif %}
+<div class="row">
+    <nav class="pagination" role="navigation">
+        {% if page > 1 %}
+            <a class="newer-posts" href="{{ prevurl }}">&larr; Newer Posts</a>
+        {% endif %}
+
+        <span class="page-number">Page {{ page }} of {{ nbpages }}</span>
+
+        {% if page < nbpages %}
+            <a class="older-posts" href="{{ path('home_paged', { page: page+1 }) }}">Older Posts &rarr;</a>
+        {% endif %}
+    </nav>
+</div>
+
+{% endif %}

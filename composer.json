@@ -1,6 +1,6 @@
 {
     "name": "netgusto/mozza-theme-dropplets",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "type": "package",
     "description": "Dropplets theme for Mozza",
     "keywords": ["silex", "theme", "mozza"],

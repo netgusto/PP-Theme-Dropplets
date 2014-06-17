@@ -28,15 +28,13 @@
 </head>
 <body>
 
-    {% block header %}
-    {% include '@Custom/header.html.twig' %}
-    {% endblock header %}
-
     {% block body %}
     {% endblock body %}
 
     {% block footer %}
+    <footer>
     {% include '@Custom/footer.html.twig' %}
+    </footer>
     {% endblock footer %}
 
     <script src="{{ app.request.basepath }}/vendor/jquery/jquery/jquery-2.1.0.min.js"></script>

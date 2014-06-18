@@ -31,7 +31,7 @@
                     {% endif %}
                     </li>
                 {% endif %}
-                <li>{{ post.date|date(config.date.format) }}</li>
+                <li>{{ post.date|humandate }}</li>
                 <li></li>
             </ul>
         </div>

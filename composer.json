@@ -1,10 +1,10 @@
 {
-    "name": "netgusto/mozza-theme-dropplets",
+    "name": "netgusto/pulpy-theme-dropplets",
     "version": "1.0.9",
     "type": "package",
-    "description": "Dropplets theme for Mozza",
-    "keywords": ["silex", "theme", "mozza"],
-    "homepage": "https://github.com/netgusto/mozza-theme-dropplets",
+    "description": "Dropplets theme for Pulpy",
+    "keywords": ["silex", "theme", "pulpy"],
+    "homepage": "https://github.com/netgusto/pulpy-theme-dropplets",
     "license": "MIT",
     "authors": [
         {

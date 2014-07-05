@@ -1,6 +1,6 @@
 {
     "name": "netgusto/pulpy-theme-dropplets",
-    "version": "1.0.12",
+    "version": "1.0.13",
     "type": "package",
     "description": "Dropplets theme for Pulpy",
     "keywords": ["silex", "theme", "pulpy"],

@@ -22,9 +22,7 @@
     <!-- Highlightjs Styles -->
     <link rel="stylesheet" href="{{ app.request.basepath }}/vendor/zipball/highlightjs/styles/monokai.css">
 
-    {% block head %}
-    {% include '@Custom/head.html.twig' %}
-    {% endblock head %}
+    {% block head %}{% endblock head %}
 </head>
 <body>
 
@@ -32,9 +30,7 @@
     {% endblock body %}
 
     {% block footer %}
-    <footer>
-    {% include '@Custom/footer.html.twig' %}
-    </footer>
+    <footer></footer>
     {% endblock footer %}
 
     <script src="{{ app.request.basepath }}/vendor/jquery/jquery/jquery-2.1.0.min.js"></script>

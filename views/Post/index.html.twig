@@ -2,8 +2,8 @@
 
 {% block body %}
 
-{% set posturl = app.url_generator.generate('post', { slug: post.slug }) %}
-{% set homeurl = app.url_generator.generate('home') %}
+{% set posturl = posturl(post.slug) %}
+{% set homeurl = path('home') %}
 
 <article class="published">
     <div class="row">
@@ -13,7 +13,7 @@
                 {% if post.image is defined and post.image|length %}
                     <img src="{{ post.image|topostresourceurl(post) }}" alt="{{ post.title }}" />
                 {% else %}
-                    <img src="{{ site.images.logo|toresourceurl() }}" alt="{{ post.title }}" />
+                    <img src="{{ siteconfig().images.logo|toresourceurl() }}" alt="{{ post.title }}" />
                 {% endif %}
                 </a>
             </div>
@@ -55,13 +55,13 @@
 
 {% if nextpost is defined and nextpost %}
 <div class="prevnext next">
-    <a class="fa fa-chevron-left" href="{{ app.url_generator.generate('post', { slug: nextpost.slug }) }}"></a>
+    <a class="fa fa-chevron-left" href="{{ posturl(nextpost.slug) }}"></a>
 </div>
 {% endif %}
 
 {% if previouspost is defined and previouspost %}
 <div class="prevnext previous">
-    <a class="fa fa-chevron-right" href="{{ app.url_generator.generate('post', { slug: previouspost.slug }) }}"></a>
+    <a class="fa fa-chevron-right" href="{{ posturl(previouspost.slug) }}"></a>
 </div>
 {% endif %}
 

@@ -6,8 +6,8 @@
     <div class="row">
         <div class="one-quarter meta">
             <div class="thumbnail">
-                {% if site.images.logo %}
-                    <img src="{{ site.images.logo|toresourceurl() }}" alt="{{ site.title }}" />
+                {% if siteconfig().images.logo %}
+                    <img src="{{ siteconfig().images.logo|toresourceurl() }}" alt="{{ siteconfig().title }}" />
                 {% endif %}
             </div>
         </div>
